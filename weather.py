@@ -5,8 +5,9 @@
 
 from tkinter import *
 from weatherAPI import *
-import sys
+from functions import *
 from os.path import join as _
+import sys
 
 memos = {}
 region = ''
@@ -56,6 +57,8 @@ def reset():
     mbutton['text'] = 'Select Region'
     output['text'] = "24 Hour Weather Forecast"
     root.title('Weather')
+
+
 
 
 # Create and pack frames
