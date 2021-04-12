@@ -47,6 +47,7 @@ def convert_hour(hourstr):
 
 def fortune():
     ''' Fortunes '''
+    import random
     fortunes = ['Godly luck.',
                 'Your wisdom makes you superior to others.',
                 'Error: Fortune not found.',
