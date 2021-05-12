@@ -1,6 +1,6 @@
 # Python Weather Application w/ GUI
 
-This project is a weather aggregate that pulls in weather predictions from the Government of Canada's [weather service](https://weather.gc.ca/) and displays them in a table. It is currently hard-coded with a selection of regions in the province of Nova Scotia and presents the data in an hour-by-hour format.
+This project is a weather data scraper that pulls in weather predictions from the Government of Canada's [weather service](https://weather.gc.ca/) and displays them in a table. It is currently hard-coded with a selection of regions in the province of Nova Scotia and presents the data in an hour-by-hour format.
 
 ## Getting Started
 
