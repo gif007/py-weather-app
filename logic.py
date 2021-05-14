@@ -3,16 +3,28 @@ import sys
 import bs4
 
 
+memo = dict()
+def resetMemo():
+    global memo
+    memo = dict()
+
+
 def getWeatherForecast(URL, unit):
     """Returns formatted 24 hour weather forecast"""
-    response = requests.get(URL)
-    try:
-        response.raise_for_status()
-    except:
-        print('Invalid URL')
-        sys.exit()
+    if URL in memo.keys():
+        print('using memoized weather data')
+        soup = memo[URL]
     else:
-        soup = getSoup(response)
+        print('fetching weather data')
+        response = requests.get(URL)
+        try:
+            response.raise_for_status()
+        except:
+            print('Invalid URL')
+            sys.exit()
+        else:
+            soup = getSoup(response)
+            memo[URL] = soup
 
     hours, temperatures, summaries = getForecastData(soup)
 

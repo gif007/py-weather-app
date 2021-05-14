@@ -3,7 +3,7 @@ import datetime
 import json
 from os.path import join
 from sys import path
-from logic import getWeatherForecast
+from logic import getWeatherForecast, resetMemo
 
 
 class Forecast(Frame):
@@ -75,6 +75,7 @@ class Forecast(Frame):
         fullUnitName = 'celsius' if self.unit == 'C' else 'fahrenheit'
         self.subheader.config(text=f'({fullUnitName})')
         self.toggle.config(text='F')
+        resetMemo()
 
 
     def instantiateMenu(self):
@@ -100,6 +101,7 @@ class Forecast(Frame):
     def getRegions(self):
         """Instantiate region data from JSON file"""
         return json.loads(open(join(path[0], 'regions.json')).read())
+        
 
 
     def updateForecast(self, region):
