@@ -1,0 +1,18 @@
+{
+    "Lunenburg": {
+        "name": "Lunenburg, NS",
+        "url": "https://weather.gc.ca/forecast/hourly/ns-21_metric_e.html"
+    },
+    "Halifax": {
+        "name": "Halifax, NS",
+        "url": "https://weather.gc.ca/forecast/hourly/ns-19_metric_e.html"
+    },
+    "Calgary": {
+        "name": "Calgary, AB",
+        "url": "https://weather.gc.ca/forecast/hourly/ab-52_metric_e.html"
+    },
+    "Toronto": {
+        "name": "Toronto, ON",
+        "url": "https://weather.gc.ca/forecast/hourly/on-143_metric_e.html"
+    }
+}
